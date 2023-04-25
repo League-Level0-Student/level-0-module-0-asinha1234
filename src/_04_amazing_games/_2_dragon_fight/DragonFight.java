@@ -65,36 +65,45 @@ playerHealth = playerHealth-dragonAttack;
 
 				// 9. If the player's health is less than or equal to 0, the game is over,
 				//    call the playerLost() method
-	
+	if (playerHealth<=0) {
+		playerLost();
 	}
+	
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
+if (dragonHealth<=0) {
+	dragonLost();
 
+	}
 			
-				// 11.  Pop up a message that tells us how much health the player and
-				// 		dragon have left.
 
-			
-		}	// (Bonus: Also display the amount of health that was lost by each in this
+// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
-			
+		}
+	}
 
 		// this is the end of the while loop
 
 	
 
 	static void playerLost() {
-		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
-
-		System.exit(0);   //This code ends the program
+		
+int playerHealth = 0;
+// 11. Tell the player that they have been defeated by the dragon and have no treasure
+if (playerHealth==0) {
+JOptionPane.showMessageDialog(null,  "you have been defeated by the dragon and have no treasure");
+}System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
-		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
+		int playerHealth=0;
+// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
+if (playerHealth<=1) {
+	JOptionPane.showMessageDialog(null,"you have defeated the dragon and have lots of treasure!");
 
-		System.exit(0);   //This code ends the program
+	System.exit(0);   //This code ends the program
 	}
 
+}
 }
